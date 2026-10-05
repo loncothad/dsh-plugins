@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agents Switch",
+    "description": "Per-provider and per-model superprompt files behind /agents-file."
+  }
+}

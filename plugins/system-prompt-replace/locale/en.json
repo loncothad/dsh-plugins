@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "System Prompt Replace",
+    "description": "Replaces dsh's built-in system prompt with your own, wholesale."
+  }
+}

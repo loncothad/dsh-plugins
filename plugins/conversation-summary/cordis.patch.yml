@@ -1,0 +1,3 @@
+- insert:
+    - id: conversation-summary
+      name: '@loncothad/dsh-conversation-summary'

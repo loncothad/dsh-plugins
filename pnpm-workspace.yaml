@@ -1,0 +1,9 @@
+packages:
+  - 'plugins/*'
+  - 'support/*'
+
+allowBuilds:
+  better-sqlite3: true
+  esbuild: true
+
+autoInstallPeers: false

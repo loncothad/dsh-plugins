@@ -1,0 +1,41 @@
+{
+  "name": "dsh-plugins-workspace",
+  "private": true,
+  "type": "module",
+  "description": "Plugin bundles for the DeepSeek Harness (dsh): providers, web search, commands, skills, shell, prompts, credentials.",
+  "scripts": {
+    "test": "node tools/build-worker.mjs && vitest run",
+    "typecheck": "node tools/typecheck.mjs",
+    "regen:paths": "tsx tools/gen-tsconfig-paths.ts",
+    "sync:manifests": "tsx tools/sync-package-manifests.ts",
+    "verify": "pnpm check && tsx tools/check/packages.ts && pnpm typecheck && pnpm build && node tools/check/build.mjs && pnpm test",
+    "build": "node tools/build.mjs",
+    "verify:registry": "node tools/check/registry-peers.mjs",
+    "qualify:browser": "node tests/browser/settings.mjs",
+    "check": "biome check --error-on-warnings .",
+    "check:fix": "biome check --write --error-on-warnings .",
+    "format": "biome format --write .",
+    "lint": "biome lint --error-on-warnings .",
+    "pack:release": "node tools/release/pack.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "22.20.4",
+    "@types/react": "18.3.1",
+    "@types/react-test-renderer": "18.3.1",
+    "esbuild": "0.28.2",
+    "music-metadata": "11.16.1",
+    "playwright": "1.61.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-test-renderer": "18.3.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.2.7"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.9.0"
+}

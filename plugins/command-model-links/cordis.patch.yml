@@ -1,0 +1,6 @@
+# Loader rows for the model-links command bundle.
+- insert:
+    - id: command-model-links
+      name: '@loncothad/dsh-command-model-links'
+      config:
+        # Semicolon-separated model=model[=...] equivalence groups.

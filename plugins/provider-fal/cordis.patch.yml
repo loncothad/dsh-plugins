@@ -1,0 +1,6 @@
+# Loader rows for the fal.ai media provider bundle.
+- insert:
+    - id: provider-fal
+      name: '@loncothad/dsh-provider-fal'
+      config:
+        outDir: "fal-media"

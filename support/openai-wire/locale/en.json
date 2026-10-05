@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenAI Wire",
+    "description": "Shared OpenAI wire core: request bodies, SSE parsing, and usage mapping."
+  }
+}

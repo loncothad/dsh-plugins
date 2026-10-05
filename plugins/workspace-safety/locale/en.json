@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workspace Safety",
+    "description": "Automatic worktree branches, checkpoint history and recovery outside working repositories."
+  }
+}

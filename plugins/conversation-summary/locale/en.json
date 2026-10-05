@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Conversation Summaries",
+    "description": "Incremental summaries in separate conversation cards, excluded from model context and compaction."
+  }
+}

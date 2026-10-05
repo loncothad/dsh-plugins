@@ -1,0 +1,6 @@
+- id: bash-sandbox
+  disabled: true
+- insert:
+    - id: shell-nix-flake
+      name: '@loncothad/dsh-shell-nix-flake'
+      disabled: !!js process.platform === 'win32'

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Nix Skill Packages",
+    "description": "Nix packages declared by skills, installed through /nix-skills."
+  }
+}

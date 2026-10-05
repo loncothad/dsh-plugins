@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Execution Recovery",
+    "description": "Leased plugin jobs, bounded attempts and inspectable failures."
+  }
+}

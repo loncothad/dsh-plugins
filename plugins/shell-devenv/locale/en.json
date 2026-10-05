@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Devenv Shell",
+    "description": "Runs shell commands inside the project devenv."
+  }
+}

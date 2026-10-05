@@ -1,0 +1,3 @@
+- insert:
+    - id: context-inspector
+      name: '@loncothad/dsh-context-inspector'

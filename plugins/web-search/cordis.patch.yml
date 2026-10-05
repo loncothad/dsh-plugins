@@ -1,0 +1,7 @@
+# Loader rows for the unified web-search bundle.
+# Provider keys resolve from config first, else the launching environment
+# (KAGI_API_KEY / OPENROUTER_API_KEY). The harness `web` row's
+# `searchProvider` setting picks which provider serves web_search.
+- insert:
+    - id: web-search
+      name: '@loncothad/dsh-web-search'

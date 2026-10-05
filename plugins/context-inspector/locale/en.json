@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Context Inspector",
+    "description": "Inspect actual model context, budget estimates and retention decisions without changing a run."
+  }
+}

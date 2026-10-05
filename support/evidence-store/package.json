@@ -1,0 +1,60 @@
+{
+  "name": "@loncothad/dsh-evidence-store",
+  "description": "Worker-owned SQLite metadata and immutable evidence objects for the DSH compactor.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "locale"
+  ],
+  "license": "MIT",
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "node ../../tools/typecheck.mjs",
+    "build": "node ../../tools/build.mjs --package support/evidence-store"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7",
+    "@types/better-sqlite3": "7.6.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loncothad/dsh-plugins.git",
+    "directory": "support/evidence-store"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "homepage": "https://github.com/loncothad/dsh-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/loncothad/dsh-plugins/issues"
+  },
+  "types": "lib/types/index.d.ts",
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "@loncothad/dsh-execution-core": "workspace:*"
+  },
+  "author": "loncothad"
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Evidence Storage",
+    "description": "Worker-owned SQLite metadata and immutable evidence objects for the DSH compactor."
+  }
+}

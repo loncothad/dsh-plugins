@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Nix Flake Shell",
+    "description": "Run commands in the nearest flake devShell."
+  }
+}

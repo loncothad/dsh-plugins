@@ -1,0 +1,67 @@
+{
+  "name": "@loncothad/dsh-evidence-harness",
+  "description": "Native DSH extraction, original-event capture, and preset replacement for the evidence compactor.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "locale"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis-plugin-loader": "1.0.5",
+    "@deepseek-ai/dsh-llm": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-session": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-session-query": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-token-meter": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-config-editor": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-compaction": "0.2.0-rc.2",
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "node ../../tools/typecheck.mjs",
+    "build": "node ../../tools/build.mjs --package support/evidence-harness"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loncothad/dsh-plugins.git",
+    "directory": "support/evidence-harness"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "homepage": "https://github.com/loncothad/dsh-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/loncothad/dsh-plugins/issues"
+  },
+  "types": "lib/types/index.d.ts",
+  "dependencies": {
+    "@loncothad/dsh-evidence-store": "workspace:*"
+  },
+  "author": "loncothad"
+}

@@ -1,0 +1,9 @@
+# Environment Isolation reference
+
+Independent dev/staging/prod DSH deployment homes with immutable environment identity, native tool admission, model/tool/output/deadline limits and deterministic configuration provenance. **Plugins → Environment Isolation** shows host readiness and configures the root, environment, default layer, environment overrides, user/profile overrides and generic-shell admission.
+
+Start one host per environment with `DSH_HOME=ROOT/dev`, `ROOT/staging` or `ROOT/prod`. Homes must be real independent directories and private on Linux. Credentials and all native DSH profile/data settings live in the selected home. Changing the environment on a running host does not switch its authority: a mismatched home blocks execution. No credentials or data are copied when `/environment prepare ENV` creates an empty home.
+
+Configuration resolves defaults → environment → user/profile → admitted run overrides, replacing whole fields and retaining provenance and a canonical fingerprint. `/environment status` inspects the resolved layer. `/environment limit KEY VALUE` may lower numeric session limits; it cannot change tools, prompts, credential scope or deployment identity. Unknown keys and invalid combinations fail. Current run counters and overrides are process-local; a new run starts with the profile policy. Durable goal and operation limits remain owned by their respective services.
+
+Model tools cannot read deployment homes or common credential files. Generic shell/terminal access is disabled by default because it can bypass simple file-path admission. When explicitly enabled, use native OS sandboxing plus Policy Engine rules; the plugin does not claim OS containment of an unrestricted shell. Trusted verifier consumers retain their own explicit execution boundary. Native sandbox denials remain authoritative. Absolute/canonical path checks protect the configured deployment roots; arbitrary third-party host plugins remain trusted code.

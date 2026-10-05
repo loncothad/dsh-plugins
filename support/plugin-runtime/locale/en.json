@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin Runtime",
+    "description": "Configuration lifecycle and native Plugins-page UI shared by DSH plugins."
+  }
+}

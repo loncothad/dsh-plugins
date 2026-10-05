@@ -1,0 +1,3 @@
+- insert:
+    - id: secrets-broker
+      name: '@loncothad/dsh-secrets-broker'

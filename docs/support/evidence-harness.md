@@ -1,0 +1,14 @@
+# Evidence Harness reference
+
+The host adapter between DSH and `@loncothad/dsh-evidence-store`. Storage workers remain independent of DSH, while this library uses public native provider, session-query, and profile-edit contracts.
+
+- `NativeExtractionAdapter` sends only attributed original spans to the operator-selected provider/model. It requires a host authorization recheck before and after model preparation, disables tools, caps output at 1,500 tokens, and bounds/validates the complete stream. Counting combines DSH’s text heuristic with conservative UTF-8 evidence and full prepared-request envelope accounting; it is not exact provider tokenization. Dispatch requires advertised extraction-model capacity or an explicit operator fallback, reserves 1,500 output tokens plus safety headroom, and keeps estimated full input within the 9,000-token monetary reservation ceiling. The fallback never overrides advertised capacity.
+- `captureOriginalLog` recovers authored, append-origin messages from a detached session-query snapshot. It scopes them to a canonical workspace and session, keeps nonhuman user-role context distinct from human input, captures authored system/developer revisions and skips derived observation/checkpoint bodies, and seals completed turns. Binary content is represented by its original attachment reference, not copied binary bytes.
+- `nativeSurfaceUnits` groups complete tool dependencies and protects instructions, exact pins, open groups, and the latest human input. `commitNativeRange` writes DSH’s checkpoint lifecycle and surface replacement synchronously, checks positional boundaries and shrinkage, and refuses competing transactions. The owning plugin must durably capture sources, publish its manifest, recheck controls/policy, validate full request pressure, and flush manual transactions.
+- `replacePresetCompaction` removes stock pruning/offload competitors and replaces one supported backend while preserving unrelated rows. `installPresetCompaction` persists that change through the public configuration editor and rejects unsupported presets before writing.
+
+This support package does not install a compaction backend by itself. [Evidence Compactor](../plugins/evidence-compactor.md) consumes it.
+
+## Native request pressure
+
+Under automatic request pressure, the native backend first masks up to eight bulky closed tool observations. It preserves call/result identity, error flags, non-text blocks, and UTF-8-safe original beginnings/endings, with scoped evidence IDs for the omitted bytes. Original capture and a prospective request manifest are durable before surface replacement. Native prune metering and replacement events cause a request rebuild; tool actions are not rerun. Reopened ledgers recover original evidence links from replacement provenance. Open groups, instruction groups and explicit pins remain protected. Manual region compaction retains its complete-group contract.

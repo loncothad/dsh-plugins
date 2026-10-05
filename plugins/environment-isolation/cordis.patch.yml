@@ -1,0 +1,3 @@
+- insert:
+    - id: environment-isolation
+      name: '@loncothad/dsh-environment-isolation'

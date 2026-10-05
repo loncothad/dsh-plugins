@@ -1,0 +1,6 @@
+# Loader rows for the decision-models bundle.
+# Keys resolve from config first, else the launching environment
+# (TYPESAFE_API_KEY / OPENROUTER_API_KEY).
+- insert:
+    - id: llm-decision-models
+      name: '@loncothad/dsh-llm-decision-models'

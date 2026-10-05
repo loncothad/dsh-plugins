@@ -1,0 +1,3 @@
+- insert:
+    - id: path-globs
+      name: '@loncothad/dsh-path-globs'

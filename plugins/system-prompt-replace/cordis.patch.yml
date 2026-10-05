@@ -1,0 +1,8 @@
+# Loader rows for the system-prompt replacement bundle. Exactly one
+# source may be set: prompt (inline) or file.
+- insert:
+    - id: system-prompt-replace
+      name: '@loncothad/dsh-system-prompt-replace'
+      config:
+        interpolate: true
+        suppressRuntimeContext: false

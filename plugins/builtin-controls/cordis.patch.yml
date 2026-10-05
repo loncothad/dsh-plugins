@@ -1,0 +1,3 @@
+- insert:
+    - id: builtin-controls
+      name: '@loncothad/dsh-builtin-controls'

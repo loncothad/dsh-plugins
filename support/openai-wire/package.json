@@ -1,0 +1,56 @@
+{
+  "name": "@loncothad/dsh-openai-wire",
+  "description": "Shared OpenAI wire core: request bodies, SSE parsing, and usage mapping.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "locale"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "node ../../tools/typecheck.mjs",
+    "build": "node ../../tools/build.mjs --package support/openai-wire"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loncothad/dsh-plugins.git",
+    "directory": "support/openai-wire"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "homepage": "https://github.com/loncothad/dsh-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/loncothad/dsh-plugins/issues"
+  },
+  "types": "lib/types/index.d.ts",
+  "peerDependencies": {},
+  "author": "loncothad"
+}

@@ -1,0 +1,87 @@
+{
+  "name": "@loncothad/dsh-plugin-runtime",
+  "description": "Configuration lifecycle and native Plugins-page UI shared by DSH plugins.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./client": {
+      "types": "./lib/types/client.d.ts",
+      "default": "./lib/client.js"
+    }
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "locale",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "node ../../tools/typecheck.mjs",
+    "build": "node ../../tools/build.mjs --package support/plugin-runtime"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loncothad/dsh-plugins.git",
+    "directory": "support/plugin-runtime"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "homepage": "https://github.com/loncothad/dsh-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/loncothad/dsh-plugins/issues"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.4",
+    "@deepseek-ai/cordis-plugin-loader": "1.0.5",
+    "@deepseek-ai/cosmokit": "1.8.5",
+    "@deepseek-ai/dsh-api-gateway": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-api-remotes": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-authorization": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-locale": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-plugin-manager": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-settings": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-credentials": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-settings": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-typert-protocol": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-typert-registry": "0.2.0-rc.2",
+    "@deepseek-ai/schemastery": "3.18.4",
+    "react": "18.3.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-llm": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-session": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-conversation": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-bash-sandbox": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-shell": "0.2.0-rc.2"
+  },
+  "types": "lib/types/index.d.ts",
+  "author": "loncothad",
+  "dependencies": {
+    "@loncothad/dsh-execution-core": "workspace:*",
+    "@loncothad/dsh-decision-core": "workspace:*"
+  }
+}

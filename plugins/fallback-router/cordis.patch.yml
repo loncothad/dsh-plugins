@@ -1,0 +1,23 @@
+# Loader rows for the recovery routing bundle: tunable retry policy plus
+# model fallback chains. Defaults mirror the stock policy; set chains to
+# route failures onto other models.
+- insert:
+    - id: fallback-router
+      name: '@loncothad/dsh-fallback-router'
+      config:
+        enabled: true
+        maxRetries: 5
+        initialDelayMs: 500
+        maxDelayMs: 10000
+        jitterRatio: 0.1
+        retryableCodes:
+          - EMPTY_RESPONSE
+          - RATE_LIMIT
+          - SERVER
+          - TIMEOUT
+          - TRANSPORT
+        chains: []
+        fallbackCodes:
+          - RATE_LIMIT
+          - SERVER
+          - AUTH

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fallback Router",
+    "description": "Retries failed model requests and routes them onto configured fallback models."
+  }
+}

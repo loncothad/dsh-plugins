@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Decision Models",
+    "description": "System One decision models (TypeSafe Jev and OpenRouter) behind the decision_ask tool."
+  }
+}

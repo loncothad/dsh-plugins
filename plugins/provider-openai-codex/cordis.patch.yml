@@ -1,0 +1,12 @@
+# Loader rows for the OpenAI Codex subscription provider bundle: the codex
+# Responses route + OAuth multiaccount login, the Daybreak chat route, and
+# subscription image generation — one signed-in account behind all three.
+- insert:
+    - id: provider-openai-codex
+      name: '@loncothad/dsh-provider-openai-codex'
+      config:
+        speed: "standard"
+        daybreakProgram: "daybreak_blue"
+        accountFallback: true
+        imageModel: "gpt-5.1-codex"
+        imageOutDir: "codex-images"

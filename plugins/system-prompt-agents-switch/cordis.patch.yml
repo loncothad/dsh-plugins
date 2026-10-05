@@ -1,0 +1,8 @@
+# Loader rows for the agents-switch superprompt bundle.
+- insert:
+    - id: system-prompt-agents-switch
+      name: '@loncothad/dsh-system-prompt-agents-switch'
+      config:
+        # Semicolon-joined designator=file mappings (provider/model, model,
+        # or model suffix); managed through /agents-file.
+        defaultFile: "AGENTS.md"

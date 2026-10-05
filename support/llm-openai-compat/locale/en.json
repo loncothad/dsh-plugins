@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenAI-Compat Adapter",
+    "description": "Shared OpenAI-compatible LlmAdapter base for provider plugins."
+  }
+}

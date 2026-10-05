@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Evidence Compactor",
+    "description": "Preserve original evidence, compact native context, and retrieve scoped originals with optional background model extraction."
+  }
+}

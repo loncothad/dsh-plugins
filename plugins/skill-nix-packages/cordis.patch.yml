@@ -1,0 +1,9 @@
+# Loader rows for the nix-packages skill provider bundle.
+- insert:
+    - id: skill-nix-packages
+      name: '@loncothad/dsh-skill-nix-packages'
+      config:
+        # Absolute roots scanned one level deep for <name>/SKILL.md.
+        roots: []
+        # Wrapper command template; {packages} expands in nixpkgs#pkg form.
+        wrapper: "nix shell {packages} -c {command}"

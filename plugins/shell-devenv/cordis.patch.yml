@@ -1,0 +1,12 @@
+# Loader rows for the devenv shell executor bundle.
+# Mount INSTEAD of bash-sandbox: this executor registers the same `shell
+# service with dev-shell wrapping ahead of the inherited spawn path.
+- id: bash-sandbox
+  disabled: true
+- insert:
+    - id: shell-devenv
+      name: '@loncothad/dsh-shell-devenv'
+      disabled: !!js process.platform === 'win32'
+      config:
+        mode: auto
+        wrapper: "devenv shell -c {command}"

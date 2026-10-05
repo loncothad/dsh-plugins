@@ -1,0 +1,7 @@
+# Loader rows for the Z.AI provider bundle.
+# Keys resolve from config first, else the launching environment
+# (ZAI_API_KEY / ZAI_CODING_CN_API_KEY); the stored subscription from
+# /zai-login serves every request first.
+- insert:
+    - id: provider-zai
+      name: '@loncothad/dsh-provider-zai'

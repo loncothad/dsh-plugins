@@ -1,0 +1,3 @@
+- insert:
+    - id: policy-engine
+      name: '@loncothad/dsh-policy-engine'

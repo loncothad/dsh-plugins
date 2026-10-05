@@ -1,0 +1,57 @@
+{
+  "name": "@loncothad/dsh-decision-core",
+  "description": "Typed decision inputs, validated answers and lifecycle-owned provider registration.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "locale"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "node ../../tools/typecheck.mjs",
+    "build": "node ../../tools/build.mjs --package support/decision-core"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loncothad/dsh-plugins.git",
+    "directory": "support/decision-core"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "homepage": "https://github.com/loncothad/dsh-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/loncothad/dsh-plugins/issues"
+  },
+  "types": "lib/types/index.d.ts",
+  "author": "loncothad"
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: provider-cloudflare-decisions
+      name: '@loncothad/dsh-provider-cloudflare-decisions'

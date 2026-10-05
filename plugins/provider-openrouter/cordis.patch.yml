@@ -1,0 +1,8 @@
+# Loader rows for the OpenRouter provider bundle.
+# Key resolves from config first, else the launching environment's
+# OPENROUTER_API_KEY.
+- insert:
+    - id: provider-openrouter
+      name: '@loncothad/dsh-provider-openrouter'
+      config:
+        mediaOutDir: "openrouter-media"

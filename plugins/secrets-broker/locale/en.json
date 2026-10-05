@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Secrets Broker",
+    "description": "Scoped credential references for trusted consumers; raw values stay on the host."
+  }
+}
